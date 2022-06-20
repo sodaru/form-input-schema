@@ -1,0 +1,16 @@
+{
+  "$schema": "https://form-input-schema.json-schema.sodaru.com/meta-schemas/input.json",
+  "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/file.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["type", "name"],
+  "properties": {
+    "type": { "const": "file" },
+    "name": { "type": "string" },
+    "label": { "type": "string" },
+    "default": true,
+    "accept": { "type": "string" },
+    "capture": { "enum": ["user", "environment"] },
+    "multiple": { "type": "boolean" }
+  }
+}

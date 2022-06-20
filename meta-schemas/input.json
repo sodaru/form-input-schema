@@ -40,9 +40,7 @@
                 "type": { "const": "string" }
               }
             },
-            "default": {
-              "const": true
-            }
+            "default": true
           }
         }
       }

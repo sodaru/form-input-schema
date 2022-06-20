@@ -1,0 +1,13 @@
+{
+  "$schema": "https://form-input-schema.json-schema.sodaru.com/meta-schemas/input.json",
+  "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/radio.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["type", "name"],
+  "properties": {
+    "type": { "const": "radio" },
+    "name": { "type": "string" },
+    "label": { "type": "string" },
+    "default": true
+  }
+}

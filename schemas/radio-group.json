@@ -1,0 +1,30 @@
+{
+  "$schema": "https://form-input-schema.json-schema.sodaru.com/meta-schemas/input.json",
+  "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/radio-group.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["type", "name"],
+  "properties": {
+    "type": { "const": "radio-group" },
+    "name": { "type": "string" },
+    "label": { "type": "string" },
+    "default": true,
+    "options": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          { "type": "string" },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["value", "label"],
+            "properties": {
+              "value": { "type": "string" },
+              "label": { "type": "string" }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

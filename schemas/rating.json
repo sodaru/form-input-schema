@@ -1,0 +1,16 @@
+{
+  "$schema": "https://form-input-schema.json-schema.sodaru.com/meta-schemas/input.json",
+  "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/rating.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["type", "name"],
+  "properties": {
+    "type": { "const": "rating" },
+    "name": { "type": "string" },
+    "label": { "type": "string" },
+    "default": true,
+    "minimum": { "type": "number" },
+    "maximum": { "type": "number" },
+    "multipleOf": { "type": "number" }
+  }
+}

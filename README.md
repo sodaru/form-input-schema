@@ -53,9 +53,9 @@ Use meta-schema from [`https://form-input-schema.json-schema.sodaru.com/meta-sch
 | [datetime](/schemas/datetime.json)             | `integer`, complete timestamp                     |
 |                                                |                                                   |
 | **Selections**                                 |                                                   |
-| [select](/schemas/select.json)                 | `enum \| string`                                  |
-| [multiselect](/schemas/multiselect.json)       | `(enum \| string)[]`                              |
+| [select](/schemas/select.json)                 | `enum \| string` OR `(enum \| string)[]`          |
 |                                                | _string_ is allowed if **allowFreeText** is true  |
+|                                                | set **multiple** to true to use multiple select   |
 |                                                |                                                   |
 | **Radios & Checkboxes**                        |                                                   |
 | [radio](/schemas/radio.json)                   | `boolean`                                         |

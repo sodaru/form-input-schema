@@ -1,0 +1,29 @@
+{
+  "$schema": "https://form-input-schema.json-schema.sodaru.com/meta-schemas/input.json",
+  "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/slider.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["type", "name", "minimum", "maximum"],
+  "properties": {
+    "type": { "const": "slider" },
+    "name": { "type": "string" },
+    "label": { "type": "string" },
+    "default": true,
+    "minimum": { "type": "number" },
+    "maximum": { "type": "number" },
+    "range": { "type": "boolean" },
+    "verticle": { "type": "boolean" },
+    "options": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["value", "label"],
+        "properties": {
+          "value": { "type": "number" },
+          "label": { "type": "string" }
+        }
+      }
+    }
+  }
+}
