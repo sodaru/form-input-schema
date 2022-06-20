@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "https://json-schema.sodaru.com/form-input-schema/meta-schemas/input.json",
+  "$id": "https://form-input-schema.json-schema.sodaru.com/meta-schemas/input.json",
   "allOf": [
     { "$ref": "http://json-schema.org/draft-07/schema" },
     {

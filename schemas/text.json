@@ -1,6 +1,6 @@
 {
   "$schema": "../meta-schemas/input.json",
-  "$id": "https://json-schema.sodaru.com/form-input-schema/schemas/text.json",
+  "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/text.json",
   "type": "object",
   "additionalProperties": false,
   "required": ["type", "name"],

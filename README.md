@@ -35,43 +35,43 @@ Use meta-schema from `https://json-schema.sodaru.com/form-input-schema/meta-sche
 
 ## Input Types
 
-| Input Type          | Data Type                                        |
-| ------------------- | ------------------------------------------------ |
-| Textual             |                                                  |
-| `text`              | `string`                                         |
-| `multiline-text`    | `string`                                         |
-| `markdown`          | `string`                                         |
-| `number`            | `number`                                         |
-| `integer`           | `integer`                                        |
-| `color`             | `string` representing color code                 |
-| `email`             | `string` representing email                      |
-| `phone`             | `string` representing phone number               |
-| `password`          | `string`                                         |
-| `uri`               | `string` representing uri                        |
-|                     |                                                  |
-| Date Time           |                                                  |
-| `date`              | `integer`, timestamp (time part set to zero)     |
-| `time`              | `integer`, number of milliseconds from UTC Date  |
-| `datetime`          | `integer`, complete timestamp                    |
-|                     |                                                  |
-| Selections          |                                                  |
-| `select`            | `enum \| string`                                 |
-| `multiselect`       | `(enum \| string)[]`                             |
-|                     | _string_ is allowed if **allowFreeText** is true |
-|                     |                                                  |
-| Radios & Checkboxes |                                                  |
-| `radio`             | `boolean`                                        |
-| `radio-group`       | `enum`                                           |
-| `checkbox`          | `boolean`                                        |
-| `checkbox-group`    | `enum[]`                                         |
-| `switch`            | `boolean`                                        |
-|                     |                                                  |
-| Files               |                                                  |
-| `file`              | `string` representing content/url of the file    |
-|                     |                                                  |
-| Others              |                                                  |
-| `rating`            | `number`                                         |
-| `slider`            | `number \| [number, nummber]`                    |
+| Input Type              | Data Type                                        |
+| ----------------------- | ------------------------------------------------ |
+| **Textual**             |                                                  |
+| `text`                  | `string`                                         |
+| `multiline-text`        | `string`                                         |
+| `markdown`              | `string`                                         |
+| `number`                | `number`                                         |
+| `integer`               | `integer`                                        |
+| `color`                 | `string` representing color code                 |
+| `email`                 | `string` representing email                      |
+| `phone`                 | `string` representing phone number               |
+| `password`              | `string`                                         |
+| `uri`                   | `string` representing uri                        |
+|                         |                                                  |
+| **Date Time**           |                                                  |
+| `date`                  | `integer`, timestamp (time part set to zero)     |
+| `time`                  | `integer`, number of milliseconds from UTC Date  |
+| `datetime`              | `integer`, complete timestamp                    |
+|                         |                                                  |
+| **Selections**          |                                                  |
+| `select`                | `enum \| string`                                 |
+| `multiselect`           | `(enum \| string)[]`                             |
+|                         | _string_ is allowed if **allowFreeText** is true |
+|                         |                                                  |
+| **Radios & Checkboxes** |                                                  |
+| `radio`                 | `boolean`                                        |
+| `radio-group`           | `enum`                                           |
+| `checkbox`              | `boolean`                                        |
+| `checkbox-group`        | `enum[]`                                         |
+| `switch`                | `boolean`                                        |
+|                         |                                                  |
+| **Files**               |                                                  |
+| `file`                  | `string` representing content/url of the file    |
+|                         |                                                  |
+| **Others**              |                                                  |
+| `rating`                | `number`                                         |
+| `slider`                | `number \| [number, nummber]`                    |
 
 ## Support
 
