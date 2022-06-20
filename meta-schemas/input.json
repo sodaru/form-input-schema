@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://json-schema.sodaru.com/form-input-schema/meta-schemas/input.json",
+  "allOf": [
+    { "$ref": "http://json-schema.org/draft-07/schema" },
+    {
+      "type": "object",
+      "required": ["type", "additionalProperties", "required", "properties"],
+      "properties": {
+        "type": { "const": "object" },
+        "additionalProperties": { "const": false },
+        "required": {
+          "type": "array",
+          "additionalItems": true,
+          "items": [{ "const": "type" }, { "const": "name" }],
+          "minItems": 2
+        },
+        "properties": {
+          "type": "object",
+          "required": ["type", "name", "label", "default"],
+          "properties": {
+            "type": {
+              "type": "object",
+              "required": ["const"],
+              "properties": {
+                "const": { "type": "string" }
+              }
+            },
+            "name": {
+              "type": "object",
+              "required": ["type"],
+              "properties": {
+                "type": { "const": "string" }
+              }
+            },
+            "label": {
+              "type": "object",
+              "required": ["type"],
+              "properties": {
+                "type": { "const": "string" }
+              }
+            },
+            "default": {
+              "const": true
+            }
+          }
+        }
+      }
+    }
+  ]
+}

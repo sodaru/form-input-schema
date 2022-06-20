@@ -1,0 +1,16 @@
+{
+  "$schema": "../meta-schemas/input.json",
+  "$id": "https://json-schema.sodaru.com/form-input-schema/schemas/text.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["type", "name"],
+  "properties": {
+    "type": { "const": "text" },
+    "name": { "type": "string" },
+    "label": { "type": "string" },
+    "default": true,
+    "minLength": { "type": "number" },
+    "maxLength": { "type": "number" },
+    "pattern": { "type": "string", "format": "regex" }
+  }
+}
