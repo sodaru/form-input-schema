@@ -27,51 +27,49 @@ To Create Dynamic Forms
 
 ## Usage
 
-Use the schemas from `https://json-schema.sodaru.com/form-input-schema/schemas/<type>.json`
+Use the schemas from [`https://form-input-schema.json-schema.sodaru.com/schemas/<type>.json`](/)
 
 ### To Create new Type
 
-Use meta-schema from `https://json-schema.sodaru.com/form-input-schema/meta-schemas/input.json`
+Use meta-schema from [`https://form-input-schema.json-schema.sodaru.com/meta-schemas/input.json`](https://form-input-schema.json-schema.sodaru.com/meta-schemas/input.json)
 
 ## Input Types
 
-| Input Type              | Data Type                                        |
-| ----------------------- | ------------------------------------------------ |
-| **Textual**             |                                                  |
-| `text`                  | `string`                                         |
-| `multiline-text`        | `string`                                         |
-| `markdown`              | `string`                                         |
-| `number`                | `number`                                         |
-| `integer`               | `integer`                                        |
-| `color`                 | `string` representing color code                 |
-| `email`                 | `string` representing email                      |
-| `phone`                 | `string` representing phone number               |
-| `password`              | `string`                                         |
-| `uri`                   | `string` representing uri                        |
-|                         |                                                  |
-| **Date Time**           |                                                  |
-| `date`                  | `integer`, timestamp (time part set to zero)     |
-| `time`                  | `integer`, number of milliseconds from UTC Date  |
-| `datetime`              | `integer`, complete timestamp                    |
-|                         |                                                  |
-| **Selections**          |                                                  |
-| `select`                | `enum \| string`                                 |
-| `multiselect`           | `(enum \| string)[]`                             |
-|                         | _string_ is allowed if **allowFreeText** is true |
-|                         |                                                  |
-| **Radios & Checkboxes** |                                                  |
-| `radio`                 | `boolean`                                        |
-| `radio-group`           | `enum`                                           |
-| `checkbox`              | `boolean`                                        |
-| `checkbox-group`        | `enum[]`                                         |
-| `switch`                | `boolean`                                        |
-|                         |                                                  |
-| **Files**               |                                                  |
-| `file`                  | `string` representing content/url of the file    |
-|                         |                                                  |
-| **Others**              |                                                  |
-| `rating`                | `number`                                         |
-| `slider`                | `number \| [number, nummber]`                    |
+| Input Type                                     | Data Type                                         |
+| ---------------------------------------------- | ------------------------------------------------- |
+| **Textual**                                    |                                                   |
+| [text](/schemas/text.json)                     | `string`                                          |
+| [multiline-text](/schemas/multiline-text.json) | `string` _optionally allow **markdown**_          |
+| [number](/schemas/number.json)                 | `number` _use **multipleOf** to support integers_ |
+| [color](/schemas/color.json)                   | `string` representing color code                  |
+| [email](/schemas/email.json)                   | `string` representing email                       |
+| [phone](/schemas/phone.json)                   | `string` representing phone number                |
+| [password](/schemas/password.json)             | `string`                                          |
+| [uri](/schemas/uri.json)                       | `string` representing uri                         |
+|                                                |                                                   |
+| **Date Time**                                  |                                                   |
+| [date](/schemas/date.json)                     | `integer`, timestamp (time part set to zero)      |
+| [time](/schemas/time.json)                     | `integer`, number of milliseconds from UTC Date   |
+| [datetime](/schemas/datetime.json)             | `integer`, complete timestamp                     |
+|                                                |                                                   |
+| **Selections**                                 |                                                   |
+| [select](/schemas/select.json)                 | `enum \| string`                                  |
+| [multiselect](/schemas/multiselect.json)       | `(enum \| string)[]`                              |
+|                                                | _string_ is allowed if **allowFreeText** is true  |
+|                                                |                                                   |
+| **Radios & Checkboxes**                        |                                                   |
+| [radio](/schemas/radio.json)                   | `boolean`                                         |
+| [radio-group](/schemas/radio-group.json)       | `enum`                                            |
+| [checkbox](/schemas/checkbox.json)             | `boolean`                                         |
+| [checkbox-group](/schemas/checkbox-group.json) | `enum[]`                                          |
+| [switch](/schemas/switch.json)                 | `boolean`                                         |
+|                                                |                                                   |
+| **Files**                                      |                                                   |
+| [file](/schemas/file.json)                     | `string` representing content/url of the file     |
+|                                                |                                                   |
+| **Others**                                     |                                                   |
+| [rating](/schemas/rating.json)                 | `number`                                          |
+| [slider](/schemas/slider.json)                 | `number \| [number, nummber]`                     |
 
 ## Support
 

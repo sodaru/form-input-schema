@@ -1,16 +1,16 @@
 {
   "$schema": "https://form-input-schema.json-schema.sodaru.com/meta-schemas/input.json",
-  "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/text.json",
+  "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/number.json",
   "type": "object",
   "additionalProperties": false,
   "required": ["type", "name"],
   "properties": {
-    "type": { "const": "text" },
+    "type": { "const": "number" },
     "name": { "type": "string" },
     "label": { "type": "string" },
     "default": true,
-    "minLength": { "type": "number" },
-    "maxLength": { "type": "number" },
-    "pattern": { "type": "string", "format": "regex" }
+    "minimum": { "type": "number" },
+    "maximum": { "type": "number" },
+    "multipleOf": { "type": "number" }
   }
 }
