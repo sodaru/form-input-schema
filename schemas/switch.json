@@ -8,6 +8,6 @@
     "type": { "const": "switch" },
     "name": { "type": "string" },
     "label": { "type": "string" },
-    "default": true
+    "default": { "type": "boolean" }
   }
 }

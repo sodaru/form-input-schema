@@ -8,7 +8,10 @@
     "type": { "const": "checkbox-group" },
     "name": { "type": "string" },
     "label": { "type": "string" },
-    "default": true,
+    "default": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
     "options": {
       "type": "array",
       "items": {
@@ -24,7 +27,9 @@
             }
           }
         ]
-      }
+      },
+      "maxItems": 10,
+      "uniqueItems": true
     }
   }
 }

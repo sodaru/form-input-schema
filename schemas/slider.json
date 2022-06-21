@@ -8,7 +8,17 @@
     "type": { "const": "slider" },
     "name": { "type": "string" },
     "label": { "type": "string" },
-    "default": true,
+    "default": {
+      "oneOf": [
+        { "type": "number" },
+        {
+          "type": "array",
+          "additionalItems": false,
+          "items": [{ "type": "number" }, { "type": "number" }],
+          "minItems": 2
+        }
+      ]
+    },
     "minimum": { "type": "number" },
     "maximum": { "type": "number" },
     "range": { "type": "boolean" },

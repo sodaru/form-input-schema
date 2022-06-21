@@ -3,14 +3,23 @@
   "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/file.json",
   "type": "object",
   "additionalProperties": false,
-  "required": ["type", "name"],
+  "required": ["type", "name", "uploadUrl"],
   "properties": {
     "type": { "const": "file" },
     "name": { "type": "string" },
     "label": { "type": "string" },
-    "default": true,
+    "default": {
+      "oneOf": [
+        { "type": "string" },
+        { "type": "array", "items": { "type": "string" } }
+      ]
+    },
     "accept": { "type": "string" },
     "capture": { "enum": ["user", "environment"] },
-    "multiple": { "type": "boolean" }
+    "multiple": { "type": "boolean" },
+    "uploadUrl": {
+      "type": "string",
+      "description": "File input type must have an uploadUrl which returns file id after successfull upload, the file id must be the value of this input. The end user must have access to file upload url"
+    }
   }
 }

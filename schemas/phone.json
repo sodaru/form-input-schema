@@ -3,12 +3,12 @@
   "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/phone.json",
   "type": "object",
   "additionalProperties": false,
-  "required": ["type", "name"],
+  "required": ["type", "name", "countryCode"],
   "properties": {
     "type": { "const": "phone" },
     "name": { "type": "string" },
     "label": { "type": "string" },
-    "default": true,
+    "default": { "type": "string", "pattern": "^\\+[0-9]{7,20}$" },
     "countryCode": {
       "oneOf": [{ "const": "auto" }, { "type": "number" }],
       "description": "if set to 'auto', the country code needs to be choosen based on the location of the device"

@@ -8,12 +8,10 @@
     "type": { "const": "multiline-text" },
     "name": { "type": "string" },
     "label": { "type": "string" },
-    "default": true,
+    "default": { "type": "string" },
     "minLength": { "type": "number" },
     "maxLength": { "type": "number" },
     "pattern": { "type": "string", "format": "regex" },
-    "markdown": { "type": "boolean" },
-    "cols": { "type": "number" },
-    "rows": { "type": "number" }
+    "markdown": { "type": "boolean" }
   }
 }

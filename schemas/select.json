@@ -8,7 +8,12 @@
     "type": { "const": "select" },
     "name": { "type": "string" },
     "label": { "type": "string" },
-    "default": true,
+    "default": {
+      "oneOf": [
+        { "type": "string" },
+        { "type": "array", "items": { "type": "string" } }
+      ]
+    },
     "options": {
       "type": "array",
       "items": {
@@ -25,6 +30,10 @@
           }
         ]
       }
+    },
+    "optionsUrl": {
+      "type": "string",
+      "description": "The url which returns options, optionally takes a query parameter 'q'. Access to the url needs to be handled by UI implementations"
     },
     "multiple": {
       "type": "boolean"
