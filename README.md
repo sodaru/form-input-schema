@@ -27,7 +27,7 @@ To Create Dynamic Forms
 
 ## Usage
 
-Use the schemas from [`https://form-input-schema.json-schema.sodaru.com/schemas/<type>.json`](/)
+Use the schemas from [`https://form-input-schema.json-schema.sodaru.com/schemas/index.json`](https://form-input-schema.json-schema.sodaru.com/schemas/index.json)
 
 ### To Create new Type
 
@@ -35,40 +35,41 @@ Use meta-schema from [`https://form-input-schema.json-schema.sodaru.com/meta-sch
 
 ## Input Types
 
-| Input Type                                     | Data Type                                                   |
-| ---------------------------------------------- | ----------------------------------------------------------- |
-| **Textual**                                    |                                                             |
-| [text](/schemas/text.json)                     | `string`                                                    |
-| [multiline-text](/schemas/multiline-text.json) | `string` _optionally allow **markdown**_                    |
-| [number](/schemas/number.json)                 | `number` _use **multipleOf** to support integers_           |
-| [color](/schemas/color.json)                   | `string` representing color code                            |
-| [email](/schemas/email.json)                   | `string` representing email                                 |
-| [phone](/schemas/phone.json)                   | `string` representing phone number                          |
-| [password](/schemas/password.json)             | `string`                                                    |
-| [uri](/schemas/uri.json)                       | `string` representing uri                                   |
-|                                                |                                                             |
-| **Date Time**                                  |                                                             |
-| [date](/schemas/date.json)                     | `integer`, timestamp (time part set to zero)                |
-| [time](/schemas/time.json)                     | `integer`, number of milliseconds from UTC Date             |
-| [datetime](/schemas/datetime.json)             | `integer`, complete timestamp                               |
-|                                                |                                                             |
-| **Selections**                                 |                                                             |
-| [select](/schemas/select.json)                 | `enum \| string` OR `(enum \| string)[]`                    |
-|                                                | _string_ is allowed if **allowFreeText** is true            |
-|                                                | set **multiple** to true to use multiple select             |
-|                                                |                                                             |
-| **Radios & Checkboxes**                        |                                                             |
-| [radio-group](/schemas/radio-group.json)       | `enum` max 10 items in enum, for more items use `select`    |
-| [checkbox](/schemas/checkbox.json)             | `boolean`                                                   |
-| [checkbox-group](/schemas/checkbox-group.json) | `enum[]` max 10 items in array, for more items use `select` |
-| [switch](/schemas/switch.json)                 | `boolean`                                                   |
-|                                                |                                                             |
-| **Files**                                      |                                                             |
-| [file](/schemas/file.json)                     | `string` representing content/url of the file               |
-|                                                |                                                             |
-| **Others**                                     |                                                             |
-| [rating](/schemas/rating.json)                 | `number`                                                    |
-| [slider](/schemas/slider.json)                 | `number \| [number, nummber]`                               |
+| Input Type                                     | Data Type                                                                  |
+| ---------------------------------------------- | -------------------------------------------------------------------------- |
+| **Textual**                                    |                                                                            |
+| [text](/schemas/text.json)                     | `string`                                                                   |
+| [multiline-text](/schemas/multiline-text.json) | `string` _optionally allow **markdown**_                                   |
+| [number](/schemas/number.json)                 | `number` _use **multipleOf** to support integers_                          |
+| [color](/schemas/color.json)                   | `string` representing color code                                           |
+| [email](/schemas/email.json)                   | `string` representing email                                                |
+| [phone](/schemas/phone.json)                   | `string` representing phone number                                         |
+| [password](/schemas/password.json)             | `string`                                                                   |
+| [uri](/schemas/uri.json)                       | `string` representing uri                                                  |
+|                                                |                                                                            |
+| **Date Time**                                  |                                                                            |
+| [date](/schemas/date.json)                     | `integer`, timestamp (time part set to zero)                               |
+| [time](/schemas/time.json)                     | `integer`, number of milliseconds from UTC Date                            |
+| [datetime](/schemas/datetime.json)             | `integer`, complete timestamp                                              |
+|                                                |                                                                            |
+| **Selections**                                 |                                                                            |
+| [select](/schemas/select.json)                 | `enum \| string` OR `(enum \| string)[]`                                   |
+|                                                | _string_ is allowed if **allowFreeText** is true                           |
+|                                                | set **multiple** to true to use multiple select                            |
+|                                                |                                                                            |
+| **Radios & Checkboxes**                        |                                                                            |
+| [radio-group](/schemas/radio-group.json)       | `enum` max 10 items in enum, for more items use `select`                   |
+| [checkbox](/schemas/checkbox.json)             | `boolean`                                                                  |
+| [checkbox-group](/schemas/checkbox-group.json) | `enum[]` max 10 items in array, for more items use `select`                |
+| [switch](/schemas/switch.json)                 | `boolean`                                                                  |
+|                                                |                                                                            |
+| **Files**                                      |                                                                            |
+| [file](/schemas/file.json)                     | `string` representing id of the file                                       |
+|                                                | file has to be uploaded to file server provided by **uploadUrl** attribute |
+|                                                |                                                                            |
+| **Others**                                     |                                                                            |
+| [rating](/schemas/rating.json)                 | `number`                                                                   |
+| [slider](/schemas/slider.json)                 | `number \| [number, nummber]`                                              |
 
 ## Support
 
