@@ -3,10 +3,9 @@
   "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/text.json",
   "type": "object",
   "additionalProperties": false,
-  "required": ["type", "name"],
+  "required": ["type"],
   "properties": {
     "type": { "const": "text" },
-    "name": { "type": "string" },
     "label": { "type": "string" },
     "default": { "type": "string" },
     "minLength": { "type": "number" },

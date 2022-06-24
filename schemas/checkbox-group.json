@@ -3,10 +3,9 @@
   "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/checkbox-group.json",
   "type": "object",
   "additionalProperties": false,
-  "required": ["type", "name"],
+  "required": ["type"],
   "properties": {
     "type": { "const": "checkbox-group" },
-    "name": { "type": "string" },
     "label": { "type": "string" },
     "default": {
       "type": "array",

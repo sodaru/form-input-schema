@@ -3,10 +3,9 @@
   "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/rating.json",
   "type": "object",
   "additionalProperties": false,
-  "required": ["type", "name"],
+  "required": ["type"],
   "properties": {
     "type": { "const": "rating" },
-    "name": { "type": "string" },
     "label": { "type": "string" },
     "default": { "type": "number" },
     "minimum": { "type": "number" },

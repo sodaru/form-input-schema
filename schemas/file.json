@@ -3,10 +3,9 @@
   "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/file.json",
   "type": "object",
   "additionalProperties": false,
-  "required": ["type", "name", "uploadUrl"],
+  "required": ["type", "uploadUrl"],
   "properties": {
     "type": { "const": "file" },
-    "name": { "type": "string" },
     "label": { "type": "string" },
     "default": {
       "oneOf": [

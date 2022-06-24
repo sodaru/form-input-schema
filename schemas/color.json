@@ -3,10 +3,9 @@
   "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/color.json",
   "type": "object",
   "additionalProperties": false,
-  "required": ["type", "name"],
+  "required": ["type"],
   "properties": {
     "type": { "const": "color" },
-    "name": { "type": "string" },
     "label": { "type": "string" },
     "default": { "type": "string", "pattern": "^#[a-f0-9]{6,8}$" },
     "alpha": { "type": "boolean" }

@@ -3,10 +3,9 @@
   "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/datetime.json",
   "type": "object",
   "additionalProperties": false,
-  "required": ["type", "name"],
+  "required": ["type"],
   "properties": {
     "type": { "const": "datetime" },
-    "name": { "type": "string" },
     "label": { "type": "string" },
     "default": { "type": "integer" },
     "minimum": { "type": "number" },

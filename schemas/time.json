@@ -3,10 +3,9 @@
   "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/time.json",
   "type": "object",
   "additionalProperties": false,
-  "required": ["type", "name"],
+  "required": ["type"],
   "properties": {
     "type": { "const": "time" },
-    "name": { "type": "string" },
     "label": { "type": "string" },
     "default": { "type": "integer" },
     "minimum": { "type": "number" },

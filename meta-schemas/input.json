@@ -12,25 +12,18 @@
         "required": {
           "type": "array",
           "additionalItems": true,
-          "items": [{ "const": "type" }, { "const": "name" }],
+          "items": [{ "const": "type" }],
           "minItems": 2
         },
         "properties": {
           "type": "object",
-          "required": ["type", "name", "label", "default"],
+          "required": ["type", "label", "default"],
           "properties": {
             "type": {
               "type": "object",
               "required": ["const"],
               "properties": {
                 "const": { "type": "string" }
-              }
-            },
-            "name": {
-              "type": "object",
-              "required": ["type"],
-              "properties": {
-                "type": { "const": "string" }
               }
             },
             "label": {

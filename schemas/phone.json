@@ -3,10 +3,9 @@
   "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/phone.json",
   "type": "object",
   "additionalProperties": false,
-  "required": ["type", "name", "countryCode"],
+  "required": ["type", "countryCode"],
   "properties": {
     "type": { "const": "phone" },
-    "name": { "type": "string" },
     "label": { "type": "string" },
     "default": { "type": "string", "pattern": "^\\+[0-9]{7,20}$" },
     "countryCode": {
