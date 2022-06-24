@@ -13,7 +13,7 @@
           "type": "array",
           "additionalItems": true,
           "items": [{ "const": "type" }],
-          "minItems": 2
+          "minItems": 1
         },
         "properties": {
           "type": "object",
