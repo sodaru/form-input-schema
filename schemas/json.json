@@ -8,6 +8,11 @@
     "type": { "const": "json" },
     "label": { "type": "string" },
     "default": true,
+    "helpText": {
+      "type": "string",
+      "description": "Input helptext with markdown support",
+      "maxLength": 2048
+    },
     "schema": { "$ref": "http://json-schema.org/draft-07/schema" }
   }
 }

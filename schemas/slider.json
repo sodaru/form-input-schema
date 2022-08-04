@@ -18,6 +18,11 @@
         }
       ]
     },
+    "helpText": {
+      "type": "string",
+      "description": "Input helptext with markdown support",
+      "maxLength": 2048
+    },
     "minimum": { "type": "number" },
     "maximum": { "type": "number" },
     "range": { "type": "boolean" },

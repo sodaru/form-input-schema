@@ -8,6 +8,11 @@
     "type": { "const": "text" },
     "label": { "type": "string" },
     "default": { "type": "string" },
+    "helpText": {
+      "type": "string",
+      "description": "Input helptext with markdown support",
+      "maxLength": 2048
+    },
     "minLength": { "type": "number" },
     "maxLength": { "type": "number" },
     "pattern": { "type": "string", "format": "regex" }

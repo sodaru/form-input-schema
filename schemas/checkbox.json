@@ -7,6 +7,11 @@
   "properties": {
     "type": { "const": "checkbox" },
     "label": { "type": "string" },
-    "default": { "type": "boolean" }
+    "default": { "type": "boolean" },
+    "helpText": {
+      "type": "string",
+      "description": "Input helptext with markdown support",
+      "maxLength": 2048
+    }
   }
 }

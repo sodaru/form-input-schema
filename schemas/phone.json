@@ -8,6 +8,11 @@
     "type": { "const": "phone" },
     "label": { "type": "string" },
     "default": { "type": "string", "pattern": "^\\+[0-9]{7,20}$" },
+    "helpText": {
+      "type": "string",
+      "description": "Input helptext with markdown support",
+      "maxLength": 2048
+    },
     "countryCode": {
       "oneOf": [{ "const": "auto" }, { "type": "number" }],
       "description": "if set to 'auto', the country code needs to be choosen based on the location of the device"

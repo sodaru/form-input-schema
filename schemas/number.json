@@ -8,6 +8,11 @@
     "type": { "const": "number" },
     "label": { "type": "string" },
     "default": { "type": "number" },
+    "helpText": {
+      "type": "string",
+      "description": "Input helptext with markdown support",
+      "maxLength": 2048
+    },
     "minimum": { "type": "number" },
     "maximum": { "type": "number" },
     "multipleOf": { "type": "number" }

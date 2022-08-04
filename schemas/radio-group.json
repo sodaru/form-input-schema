@@ -8,6 +8,11 @@
     "type": { "const": "radio-group" },
     "label": { "type": "string" },
     "default": { "type": "string" },
+    "helpText": {
+      "type": "string",
+      "description": "Input helptext with markdown support",
+      "maxLength": 2048
+    },
     "options": {
       "type": "array",
       "items": {

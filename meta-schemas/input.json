@@ -33,7 +33,8 @@
                 "type": { "const": "string" }
               }
             },
-            "default": true
+            "default": true,
+            "helpText": true
           }
         }
       }
