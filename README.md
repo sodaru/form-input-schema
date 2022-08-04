@@ -46,6 +46,7 @@ Use meta-schema from [`https://form-input-schema.json-schema.sodaru.com/meta-sch
 | [phone](/schemas/phone.json)                   | `string` representing phone number                                         |
 | [password](/schemas/password.json)             | `string`                                                                   |
 | [uri](/schemas/uri.json)                       | `string` representing uri                                                  |
+| [json](/schemas/json.json)                     | `json` representing any json data                                          |
 |                                                |                                                                            |
 | **Date Time**                                  |                                                                            |
 | [date](/schemas/date.json)                     | `integer`, timestamp (time part set to zero)                               |
