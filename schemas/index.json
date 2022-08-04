@@ -20,6 +20,7 @@
     { "$ref": "./switch.json" },
     { "$ref": "./text.json" },
     { "$ref": "./time.json" },
-    { "$ref": "./uri.json" }
+    { "$ref": "./uri.json" },
+    { "$ref": "./json.json" }
   ]
 }
