@@ -1,13 +1,18 @@
 {
   "$schema": "https://form-input-schema.json-schema.sodaru.com/meta-schemas/input.json",
-  "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/radio-group.json",
+  "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/input/select.json",
   "type": "object",
   "additionalProperties": false,
   "required": ["type"],
   "properties": {
-    "type": { "const": "radio-group" },
+    "type": { "const": "select" },
     "label": { "type": "string" },
-    "default": { "type": "string" },
+    "default": {
+      "oneOf": [
+        { "type": "string" },
+        { "type": "array", "items": { "type": "string" } }
+      ]
+    },
     "helpText": {
       "type": "string",
       "description": "Input helptext with markdown support",
@@ -28,9 +33,17 @@
             }
           }
         ]
-      },
-      "maxItems": 10,
-      "uniqueItems": true
+      }
+    },
+    "optionsUrl": {
+      "type": "string",
+      "description": "The url which returns options, optionally takes a query parameter 'q'. Access to the url needs to be handled by UI implementations"
+    },
+    "multiple": {
+      "type": "boolean"
+    },
+    "allowFreeText": {
+      "type": "boolean"
     }
   }
 }

@@ -1,11 +1,11 @@
 {
   "$schema": "https://form-input-schema.json-schema.sodaru.com/meta-schemas/input.json",
-  "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/date.json",
+  "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/input/time.json",
   "type": "object",
   "additionalProperties": false,
   "required": ["type"],
   "properties": {
-    "type": { "const": "date" },
+    "type": { "const": "time" },
     "label": { "type": "string" },
     "default": { "type": "integer" },
     "helpText": {

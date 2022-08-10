@@ -1,17 +1,15 @@
 {
   "$schema": "https://form-input-schema.json-schema.sodaru.com/meta-schemas/input.json",
-  "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/select.json",
+  "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/input/checkbox-group.json",
   "type": "object",
   "additionalProperties": false,
   "required": ["type"],
   "properties": {
-    "type": { "const": "select" },
+    "type": { "const": "checkbox-group" },
     "label": { "type": "string" },
     "default": {
-      "oneOf": [
-        { "type": "string" },
-        { "type": "array", "items": { "type": "string" } }
-      ]
+      "type": "array",
+      "items": { "type": "string" }
     },
     "helpText": {
       "type": "string",
@@ -33,17 +31,9 @@
             }
           }
         ]
-      }
-    },
-    "optionsUrl": {
-      "type": "string",
-      "description": "The url which returns options, optionally takes a query parameter 'q'. Access to the url needs to be handled by UI implementations"
-    },
-    "multiple": {
-      "type": "boolean"
-    },
-    "allowFreeText": {
-      "type": "boolean"
+      },
+      "maxItems": 10,
+      "uniqueItems": true
     }
   }
 }

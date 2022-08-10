@@ -1,16 +1,13 @@
 {
   "$schema": "https://form-input-schema.json-schema.sodaru.com/meta-schemas/input.json",
-  "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/checkbox-group.json",
+  "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/input/radio-group.json",
   "type": "object",
   "additionalProperties": false,
   "required": ["type"],
   "properties": {
-    "type": { "const": "checkbox-group" },
+    "type": { "const": "radio-group" },
     "label": { "type": "string" },
-    "default": {
-      "type": "array",
-      "items": { "type": "string" }
-    },
+    "default": { "type": "string" },
     "helpText": {
       "type": "string",
       "description": "Input helptext with markdown support",

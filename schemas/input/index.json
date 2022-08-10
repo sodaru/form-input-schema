@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/input/index.json",
+  "oneOf": [
+    { "$ref": "./checkbox-group.json" },
+    { "$ref": "./checkbox.json" },
+    { "$ref": "./color.json" },
+    { "$ref": "./date.json" },
+    { "$ref": "./datetime.json" },
+    { "$ref": "./email.json" },
+    { "$ref": "./file.json" },
+    { "$ref": "./multiline-text.json" },
+    { "$ref": "./number.json" },
+    { "$ref": "./password.json" },
+    { "$ref": "./phone.json" },
+    { "$ref": "./radio-group.json" },
+    { "$ref": "./rating.json" },
+    { "$ref": "./select.json" },
+    { "$ref": "./slider.json" },
+    { "$ref": "./switch.json" },
+    { "$ref": "./text.json" },
+    { "$ref": "./time.json" },
+    { "$ref": "./uri.json" },
+    { "$ref": "./json.json" }
+  ]
+}

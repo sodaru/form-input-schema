@@ -1,79 +1,61 @@
 # Form Input Schema
 
-## Overview
+> Forms are the basic method of capturing user input
 
-A `Form Input` represents an User Interface to collect information from the end users
+`Form Input Schema` is a platform agnostic way to define the form to collect the user inputs.
 
-HTML defines [Input Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#forms) to such User Interfaces.
+`Form Input schema` defines
 
-Its easy to create UI when inputs are known during development. Dynamically creating the input forms will be challenging because the UI has to be creating during runtime.
+- The Input collection method  
+   example:- `text`, `select`, `color`, `file`,... etc
+- The Validation for the Input
+- Name, Label and Helper Text for the inputs
+- Grouping of Similar Inputs
 
-An Input will have
+## Documentation
 
-- **User Experience** related attributes
-  - theme, type of the input (text, checkbox, switch, slider, color chooser, ... etc)
-- **Data Validation** related attributes
-  - data-type, default value, max & min length of chars, max & min values ... etc
+https://docs.form-input-schema.json-schema.sodaru.com
 
-This project defines schema for Data Validation attributes of different types of inputs.
+## Use Cases
 
-To Create Dynamic Forms
-
-- a backend service can save the data matching the schemas in this project.
-- an UI Utility to create UI Input Components from the dynamic data.
-- dynamic form can be created by retrieving the data attributes from backend service and using the UI creation utility.
-
-> This contains schema for all input types defined by HTML + additional input type
+- The Product Owner / Designer can define the form in the platform independent way. Individual Client (Web / Mobile / Desktop) developers can dynamically create the User Interface from the form input schema
+- In case of generating Dynamic Forms, the dynamic form configuration can be saved using the form input schema
 
 ## Usage
 
-Use the schemas from [`https://form-input-schema.json-schema.sodaru.com/schemas/index.json`](https://form-input-schema.json-schema.sodaru.com/schemas/index.json)
+The JSON Schema for the form input is available at https://form-input-schema.json-schema.sodaru.com/schemas/index.json
 
-### To Create new Type
-
-Use meta-schema from [`https://form-input-schema.json-schema.sodaru.com/meta-schemas/input.json`](https://form-input-schema.json-schema.sodaru.com/meta-schemas/input.json)
-
-## Input Types
-
-| Input Type                                     | Data Type                                                                  |
-| ---------------------------------------------- | -------------------------------------------------------------------------- |
-| **Textual**                                    |                                                                            |
-| [text](/schemas/text.json)                     | `string`                                                                   |
-| [multiline-text](/schemas/multiline-text.json) | `string` _optionally allow **markdown**_                                   |
-| [number](/schemas/number.json)                 | `number` _use **multipleOf** to support integers_                          |
-| [color](/schemas/color.json)                   | `string` representing color code                                           |
-| [email](/schemas/email.json)                   | `string` representing email                                                |
-| [phone](/schemas/phone.json)                   | `string` representing phone number                                         |
-| [password](/schemas/password.json)             | `string`                                                                   |
-| [uri](/schemas/uri.json)                       | `string` representing uri                                                  |
-| [json](/schemas/json.json)                     | `json` representing any json data                                          |
-|                                                |                                                                            |
-| **Date Time**                                  |                                                                            |
-| [date](/schemas/date.json)                     | `integer`, timestamp (time part set to zero)                               |
-| [time](/schemas/time.json)                     | `integer`, number of milliseconds from UTC Date                            |
-| [datetime](/schemas/datetime.json)             | `integer`, complete timestamp                                              |
-|                                                |                                                                            |
-| **Selections**                                 |                                                                            |
-| [select](/schemas/select.json)                 | `enum \| string` OR `(enum \| string)[]`                                   |
-|                                                | _string_ is allowed if **allowFreeText** is true                           |
-|                                                | set **multiple** to true to use multiple select                            |
-|                                                |                                                                            |
-| **Radios & Checkboxes**                        |                                                                            |
-| [radio-group](/schemas/radio-group.json)       | `enum` max 10 items in enum, for more items use `select`                   |
-| [checkbox](/schemas/checkbox.json)             | `boolean`                                                                  |
-| [checkbox-group](/schemas/checkbox-group.json) | `enum[]` max 10 items in array, for more items use `select`                |
-| [switch](/schemas/switch.json)                 | `boolean`                                                                  |
-|                                                |                                                                            |
-| **Files**                                      |                                                                            |
-| [file](/schemas/file.json)                     | `string` representing id of the file                                       |
-|                                                | file has to be uploaded to file server provided by **uploadUrl** attribute |
-|                                                |                                                                            |
-| **Others**                                     |                                                                            |
-| [rating](/schemas/rating.json)                 | `number`                                                                   |
-| [slider](/schemas/slider.json)                 | `number \| [number, nummber]`                                              |
-
-## Support
-
-This project is a part of Open Source Intitiative from [Sodaru Technologies](https://sodaru.com)
-
-Write an email to opensource@sodaru.com for queries on this project
+```json
+{
+  "inputs": {
+    "user.name": {
+      "type": "text",
+      "label": "Name"
+    },
+    "user.email": {
+      "type": "email",
+      "label": "Email"
+    },
+    "user.dob": {
+      "type": "date",
+      "label": "Date of Birth"
+    }
+  },
+  "schema": {
+    "type": "object",
+    "additionalProperties": "false",
+    "properties": {
+      "user.name": {
+        "type": "string"
+      },
+      "user.email": {
+        "type": "string",
+        "format": "email"
+      },
+      "user.dob": {
+        "type": "number"
+      }
+    }
+  }
+}
+```

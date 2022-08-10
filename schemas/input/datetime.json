@@ -1,20 +1,19 @@
 {
   "$schema": "https://form-input-schema.json-schema.sodaru.com/meta-schemas/input.json",
-  "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/uri.json",
+  "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/input/datetime.json",
   "type": "object",
   "additionalProperties": false,
   "required": ["type"],
   "properties": {
-    "type": { "const": "uri" },
+    "type": { "const": "datetime" },
     "label": { "type": "string" },
-    "default": { "type": "string", "format": "uri" },
+    "default": { "type": "integer" },
     "helpText": {
       "type": "string",
       "description": "Input helptext with markdown support",
       "maxLength": 2048
     },
-    "minLength": { "type": "number" },
-    "maxLength": { "type": "number" },
-    "pattern": { "type": "string", "format": "regex" }
+    "minimum": { "type": "number" },
+    "maximum": { "type": "number" }
   }
 }

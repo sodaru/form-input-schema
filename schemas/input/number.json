@@ -1,19 +1,20 @@
 {
   "$schema": "https://form-input-schema.json-schema.sodaru.com/meta-schemas/input.json",
-  "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/time.json",
+  "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/input/number.json",
   "type": "object",
   "additionalProperties": false,
   "required": ["type"],
   "properties": {
-    "type": { "const": "time" },
+    "type": { "const": "number" },
     "label": { "type": "string" },
-    "default": { "type": "integer" },
+    "default": { "type": "number" },
     "helpText": {
       "type": "string",
       "description": "Input helptext with markdown support",
       "maxLength": 2048
     },
     "minimum": { "type": "number" },
-    "maximum": { "type": "number" }
+    "maximum": { "type": "number" },
+    "multipleOf": { "type": "number" }
   }
 }

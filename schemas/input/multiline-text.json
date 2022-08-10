@@ -1,6 +1,6 @@
 {
   "$schema": "https://form-input-schema.json-schema.sodaru.com/meta-schemas/input.json",
-  "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/multiline-text.json",
+  "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/input/multiline-text.json",
   "type": "object",
   "additionalProperties": false,
   "required": ["type"],

@@ -1,17 +1,20 @@
 {
   "$schema": "https://form-input-schema.json-schema.sodaru.com/meta-schemas/input.json",
-  "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/switch.json",
+  "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/input/rating.json",
   "type": "object",
   "additionalProperties": false,
   "required": ["type"],
   "properties": {
-    "type": { "const": "switch" },
+    "type": { "const": "rating" },
     "label": { "type": "string" },
-    "default": { "type": "boolean" },
+    "default": { "type": "number" },
     "helpText": {
       "type": "string",
       "description": "Input helptext with markdown support",
       "maxLength": 2048
-    }
+    },
+    "minimum": { "type": "number" },
+    "maximum": { "type": "number" },
+    "multipleOf": { "type": "number" }
   }
 }

@@ -1,20 +1,20 @@
 {
   "$schema": "https://form-input-schema.json-schema.sodaru.com/meta-schemas/input.json",
-  "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/number.json",
+  "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/input/email.json",
   "type": "object",
   "additionalProperties": false,
   "required": ["type"],
   "properties": {
-    "type": { "const": "number" },
+    "type": { "const": "email" },
     "label": { "type": "string" },
-    "default": { "type": "number" },
+    "default": { "type": "string", "format": "email" },
     "helpText": {
       "type": "string",
       "description": "Input helptext with markdown support",
       "maxLength": 2048
     },
-    "minimum": { "type": "number" },
-    "maximum": { "type": "number" },
-    "multipleOf": { "type": "number" }
+    "minLength": { "type": "number" },
+    "maxLength": { "type": "number" },
+    "pattern": { "type": "string", "format": "regex" }
   }
 }

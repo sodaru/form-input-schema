@@ -1,20 +1,18 @@
 {
   "$schema": "https://form-input-schema.json-schema.sodaru.com/meta-schemas/input.json",
-  "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/rating.json",
+  "$id": "https://form-input-schema.json-schema.sodaru.com/schemas/input/json.json",
   "type": "object",
   "additionalProperties": false,
-  "required": ["type"],
+  "required": ["type", "schema"],
   "properties": {
-    "type": { "const": "rating" },
+    "type": { "const": "json" },
     "label": { "type": "string" },
-    "default": { "type": "number" },
+    "default": true,
     "helpText": {
       "type": "string",
       "description": "Input helptext with markdown support",
       "maxLength": 2048
     },
-    "minimum": { "type": "number" },
-    "maximum": { "type": "number" },
-    "multipleOf": { "type": "number" }
+    "schema": { "$ref": "http://json-schema.org/draft-07/schema" }
   }
 }
