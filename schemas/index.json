@@ -30,7 +30,12 @@
         "type": "object",
         "properties": {
           "label": { "type": "string" },
-          "helpText": { "type": "string" }
+          "helpText": { "type": "string" },
+          "children": {
+            "type": "array",
+            "description": "Children of this Group. can be name of the input of another group",
+            "items": { "type": "string" }
+          }
         }
       }
     }
